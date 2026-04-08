@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Free Followers </title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);
+      text-align: center;
+      color: white;
+    }
+
+    .box {
+      margin-top: 120px;
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      margin: auto;
+    }
+
+    input, button {
+      padding: 10px;
+      width: 90%;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #00ff99;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Free Followers </h2>
+  <p>Enter Instagram URL</p>
+
+  <input type="text" id="url" placeholder="Enter URL">
+
+  <button onclick="window.location.href='select.html'">Continue</button>
+
+<script>
+function go(){
+  let url = document.getElementById("url").value;
+
+  if(url == ""){
+    alert("Enter URL");
+  } else {
+    localStorage.setItem("url", url);
+    window.location.href = "select.html";
+  }
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Page 1</h2>
+
+<button onclick="window.location.href='select.html'">
+  Go to Page 2
+</button>
+
+</body>
+</html>
